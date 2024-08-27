@@ -1,1 +1,70 @@
+body {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333;
+    background-color: #327f50;
+}
+body {
+    margin: 0;
+}
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+user agent stylesheet
+body {
+    display: block;
+    margin: 8px;
+}
+
+
+
+/* Define the main Navigation block */
+.myNav {
+  display: block;
+  height: 50px;
+  line-height: 50px;
+  background-color: greenyellow;
+  align-items: center;
+  align-content: space-evenly;
+}
+
+/* Remove bullets, margin and padding */
+.myNav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.myNav li {
+  float: left; /* Or you can use display: inline; */
+}
+
+/* Define the block styling for the links */
+.myNav li a {
+  display: inline-block;
+  text-align: center;
+  padding: 14px 16px;
+}
+
+/* This is optional, however if you want to display the 
+active link differently apply a background to it */
+.myNav li a.active {
+  background-color: #3786e1;
+}
+
+/**/
+
+
+/**/
+
+
+
+
+
+
+
 #success_message{ display: none;}

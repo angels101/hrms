@@ -1,3 +1,9 @@
+//
+
+
+
+///
+
   $(document).ready(function() {
     $('#contact_form').bootstrapValidator({
         // To use feedback icons, ensure that you use Bootstrap v3.1.0 or later
