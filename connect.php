@@ -6,7 +6,7 @@
         $last_name = $_POST['last_name'];
         $department = $_POST['department'];
         $user_name = $_POST['user_name'];
-        $user_password = $_POST['department'];
+        $user_password = $_POST['user_password'];
         $confirm_password = $_POST['confirm_password'];
         $email = $_POST['email'];
         $contact_no = $_POST['contact_no'];
@@ -28,7 +28,8 @@
     }
 
     // using sql to create a data entry query
-    $sql = "INSERT INTO contactform_entries (id, fname, lname, email) VALUES ('0', '$fname', '$lname', '$email')";
+    $sql = "INSERT INTO employees (id, first_name, last_name, department, user_name, user_password, confirm_password, email, contact_no)
+     VALUES ('0', '$first_name', '$last_name', '$department', '$user_name', '$user_password','$confirm_password', '$email', '$contact_no',)";
   
     // send query to the database to add values and confirm if successful
     $rs = mysqli_query($con, $sql);
