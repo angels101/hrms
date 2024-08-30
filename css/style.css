@@ -1,0 +1,521 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /*display: flex;*/
+    /*justify-content: center;*/
+    background: linear-gradient(to right top, rgb(236 252 203), #4763);
+    align-items: center;
+    min-height: 100vh;
+    background-repeat: no-repeat;
+}
+
+nav {
+    background: #96cb51;
+    align-content: center;
+}
+
+.container {
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.container .left-side {
+    display: flex;
+    width: 100%;
+}
+
+.container .logo {
+    padding: 1px 5px;
+    font-size: 13px;
+    color: white;
+    cursor: pointer;
+}
+
+.container .serch-box {
+    width: 270 px;
+    height: 30px;
+    border-radius: 30px;
+    display: flex;
+    margin: 4px;
+    background: #ccc;
+    margin: 4px;
+}
+
+.container .serch-box input {
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: none;
+    background: #ccc;
+    padding: 5px 26px;
+    font-size: 13px;
+    border-radius: 20px;
+
+
+
+}
+
+.container .serch-box i {
+    font-size: 20px;
+    padding: 5px 5px;
+}
+
+
+.container .midel-side {
+    display: flex;
+    margin-right: auto;
+
+}
+
+.container .midel-side a {
+    padding: 5px 22px;
+    color: #fcfcfc;
+}
+
+.container .midel-side a i {
+    font-size: 24px;
+    color: white;
+
+}
+
+.container .right-side .profile-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+}
+
+.container .right-side .profile-icon img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+.dashboard {
+    width: 80%;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+}
+
+h1,
+h2,
+h3 {
+    text-align: center;
+    color: #333;
+}
+
+.form-container,
+.table-container {
+    margin: 20px 0;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+input[type="time"],
+input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button[type="submit"],
+button[type="button"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+button[type="submit"]:hover,
+button[type="button"]:hover {
+    background-color: #45a049;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table,
+th,
+td {
+    border: 1px solid #ddd;
+}
+
+th,
+td {
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.interview {
+    margin-bottom: 20px;
+}
+
+.interview label {
+    margin-top: 10px;
+}
+
+
+/*SIDE NAVBAR*/
+.sidenav {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #118;
+    padding-top: 20px;
+    transition: top 0.3s;
+    /* Transition effect when sliding down (and up) */
+}
+
+.sidenav h2 {
+    color: white;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 24px;
+}
+
+.sidenav a {
+    padding: 15px 25px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #818181;
+    display: block;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+    background-color: #575757;
+}
+
+.main {
+    margin-left: 250px;
+    padding: 20px;
+    width: calc(100% - 250px);
+}
+
+.main h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+
+
+
+
+h1 {
+    text-align: center;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+input[type="time"],
+input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+/*?
+
+
+
+*/
+
+/*?body {
+    margin: auto;
+}*/
+
+.nav-wrapper {
+    background-color: #ffff;
+    padding: 5px;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    box-shadow: 3px 3px 5px 6px #ccc;
+    z-index: 1;
+}
+
+#icon {
+    max-width: 200px;
+}
+
+.nav-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.nav-list li {
+    display: inline;
+    margin: 0;
+    padding-top: 26px;
+}
+
+.nav-list li a {
+    color: #1b91db;
+    text-decoration: none;
+    padding: 22px;
+}
+
+.employees {
+    margin-left: 1.5%;
+}
+
+.employee-list {
+    list-style: none;
+    padding-bottom: 10px;
+    display: inline-flex;
+    max-width: 100%;
+    flex-wrap: wrap;
+    background-color: #edeeef;
+    border-style: hidden;
+    border-radius: 10px;
+}
+
+.employee-card {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: white;
+    border-style: hidden;
+    border-radius: 10px;
+    max-width: 100%;
+    margin: 20px;
+    padding: 15px;
+    box-shadow: 3px 3px 5px 6px #ccc;
+}
+
+.user-img {
+    float: left;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 100px;
+    border-color: #1b91db;
+}
+
+.employment-details {
+    display: block;
+    float: right;
+    margin-left: 20px;
+}
+
+.interviews {
+    margin: 1.5%;
+    width: 25%;
+    list-style: none;
+    background-color: #edeeef;
+    border-style: hidden;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.list-item {
+    background-color: white;
+    margin: 20px;
+    padding: 10px;
+    box-shadow: 3px 3px 5px 6px #ccc;
+    border-style: hidden;
+    border-radius: 5px;
+}
+
+.accept-btn {
+    width: auto;
+    background-color: #36bc65;
+    border: none;
+    color: white;
+    padding: 8px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 1% 2% 0% 0%;
+}
+
+.reject-btn {
+    width: auto;
+    background-color: red;
+    border: none;
+    color: white;
+    padding: 8px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 1% 2% 0% 0%;
+}
+
+#employeeModal {
+    text-align: center;
+    width: 30%;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 10px;
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    background-color: white;
+}
+
+.modal-header {
+    border-radius: 10px 10px 0px 0px;
+    background-color: #1b91db;
+}
+
+.modal-header-content {
+    font-size: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-weight: bold;
+}
+
+#confirmBtn {
+    margin: 30px;
+    float: right;
+}
+
+.name-format {
+    color: #1b91db;
+    font-weight: bold;
+}
+
+input {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+#confirmBtn {
+    width: auto;
+    border: none;
+    color: white;
+    padding: 8px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #36bc65;
+}
+
+#interviewModal {
+    text-align: center;
+    width: 30%;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 10px;
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    background-color: white;
+}
+
+#confirmIntBtn {
+    width: auto;
+    border: none;
+    color: white;
+    padding: 8px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #36bc65;
+    margin: 30px;
+    /*float: right;*/
+}
+
+.btn {
+
+   
+    background-color: #1b91db;
+    width: 8%;
+    border: none;
+    color: white;
+    padding: 12px 16px;
+    text-align: center;
+
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+
+    margin-right: 2%;
+}

@@ -1,6 +1,11 @@
 <?php
+
+include 'config.php';
     // getting all values from the HTML form
-    if(isset($_POST['submit']))
+    if($_SERVER['REQUEST_METHOD'] === 'POST'){
+
+    {
+    if(isset($_POST['first_name']))
     {
         $first_name = $_POST['first_name'];
         $last_name = $_POST['last_name'];
@@ -12,35 +17,20 @@
         $contact_no = $_POST['contact_no'];
     }
 
-    // database details
-    $host = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "hrms_db";
-
-    // creating a connection
-    $con = mysqli_connect($host, $username, $password, $dbname);
-
-    // to ensure that the connection is made
-    if (!$con)
-    {
-        die("Connection failed!" . mysqli_connect_error());
-    }
-
+    
     // using sql to create a data entry query
-    $sql = "INSERT INTO employees (id, first_name, last_name, department, user_name, user_password, confirm_password, email, contact_no)
-     VALUES ('0', '$first_name', '$last_name', '$department', '$user_name', '$user_password','$confirm_password', '$email', '$contact_no',)";
+    $sql = "INSERT INTO employees (first_name, last_name, department, user_name, user_password, confirm_password, email, contact_no)
+     VALUES ('$first_name', '$last_name', '$department', '$user_name', '$user_password','$confirm_password', '$email', '$contact_no')";
   
     // send query to the database to add values and confirm if successful
-    $rs = mysqli_query($con, $sql);
-    if($rs)
+    if ($con->query($sql) === TRUE )
     {
-        echo "Entries added!";
+       header("location:login.php");
     }
-  
+  }
+}
     // close connection
     mysqli_close($con);
-
 ?>
 <!DOCTYPE html>
 
@@ -77,7 +67,7 @@
   <div class="container">
 
 
-    <form class="well form-horizontal" action="connect.php" method="post"  id="contact_form">
+    <form class="well form-horizontal" action="index.php" method="post"  id="contact_form">
 <fieldset>
 
 <!-- Form Name -->
@@ -214,3 +204,4 @@
 <script src="scripts.js" type="text/javascript"></script>
 </body>
 </html>
+
